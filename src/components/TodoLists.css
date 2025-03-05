@@ -12,7 +12,7 @@ body {
     color: navy;
 }
 .text-secondary {
-    color: red;
+    color: white;
 }
 .text-overflow {
     overflow-wrap: break-word;
@@ -81,6 +81,10 @@ body {
 }
 .skyblue {
     color: skyblue;
+}
+.more-btn {
+    right: 1rem;
+    top: 0;
 }
 
 /* id */
