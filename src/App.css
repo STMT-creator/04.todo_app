@@ -78,5 +78,7 @@ form,
 .posi-relative {
     position: relative;
 }
-
+.d-none {
+    display: none;
+}
 /**/

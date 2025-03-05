@@ -54,6 +54,12 @@ function App() {
       ["color"] : e.target.dataset.color
     }))
   }
+  function onClickMore(){
+    document.querySelector(".btn-group").classList.toggle("d-none")
+  }
+  function onClickDel(e){
+    console.log("delete!", e.target)
+  }
   return (
     <>
       <TodoHeader />
@@ -63,7 +69,7 @@ function App() {
         onClick={onClick}
         onChange={onChange}
         onSubmit={onSubmit} />
-      <TodoLists todos={todos} />
+      <TodoLists todos={todos} onClickMore={onClickMore} onClickDel={onClickDel} />
     </>
   )
 }

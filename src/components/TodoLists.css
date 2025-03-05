@@ -82,9 +82,13 @@ body {
 .skyblue {
     color: skyblue;
 }
-.more-btn {
+/* .more-btn {
     right: 1rem;
     top: 0;
+} */
+.del-btn {
+    right: 1.5rem;
+    bottom: 2.5rem;
 }
 
 /* id */
