@@ -47,18 +47,22 @@ function App() {
   }
   function onClick(e){
     // console.dir(e.target)
-    console.dir(e.target)
+    console.dir(e.target.classList)
+    if(e.target.classList.length < 4) {
+      e.target.classList.add("btn-active")
+    }
     setFormData(prevData => ({
       ...prevData,
       ["category"] : e.target.innerText,
       ["color"] : e.target.dataset.color
     }))
   }
-  function onClickMore(){
-    document.querySelector(".btn-group").classList.toggle("d-none")
+  function onClickMore(e){
+    document.querySelector(".btn-group").classList.toggle("d-none");
+    // console.dir(e.target.previousElementSibling)
   }
-  function onClickDel(e){
-    console.log("delete!", e.target)
+  function onClickDel(e, todoId){
+    setTodos(prevTodo => [prevTodo.id !== todoId])
   }
   return (
     <>
