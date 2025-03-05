@@ -72,6 +72,11 @@ form,
 .fs-3 {
     font-size: 1rem;
 }
-
+.posi-absolute {
+    position: absolute;
+}
+.posi-relative {
+    position: relative;
+}
 
 /**/
