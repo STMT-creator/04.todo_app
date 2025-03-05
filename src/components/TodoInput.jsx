@@ -3,13 +3,6 @@ import "./TodoInput.css"
 
 
 function TodoInput({ onChange, onSubmit, formData, onClick }) {
-    const categories = [
-        { name: "free time", color: "orange", id: 1 },
-        { name: "travel", color: "pink", id: 2 },
-        { name: "meeting", color: "yellowgreen", id: 3 },
-        { name: "design", color: "chocolate", id: 4 },
-        { name: "etc", color: "skyblue", id: 5 }
-    ]
     return (
         <>
             <form className="mx-auto" onSubmit={onSubmit}>
@@ -17,16 +10,11 @@ function TodoInput({ onChange, onSubmit, formData, onClick }) {
                     <legend>Todo App</legend>
                     <div className="title-area d-flex container gap-1 flex-column">
                         <div className="btns d-flex justify-between">
-                            {
-                                categories.map(category => {
-                                    return <button key={category.id}
-                                        type="button" onClick={(e) => onClick(e)}
-                                        className={`btn text-primary btn-active`} // ${category.id - 1 ==  ? "btn-active" : ""}
-                                        data-color={category.color}>
-                                        {category.name}
-                                    </button>
-                                })
-                            }
+                            <button type="button" onClick={(e) => onClick(e)} className="btn text-caps btn-active">free time</button>
+                            <button type="button" onClick={(e) => onClick(e)} className="btn text-caps">meeting</button>
+                            <button type="button" onClick={(e) => onClick(e)} className="btn text-caps">family</button>
+                            <button type="button" onClick={(e) => onClick(e)} className="btn text-caps">travel</button>
+                            <button type="button" onClick={(e) => onClick(e)} className="btn text-caps">etc</button>
                         </div>
                         <input type="text" className="text-overflow" name="title" id="title" placeholder='Todo Title' onChange={onChange} value={formData.title} />
                         <textarea name="desc" className="text-overflow" id="desc" cols="20" rows="10" placeholder='add a description' value={formData.desc} onChange={onChange}></textarea>

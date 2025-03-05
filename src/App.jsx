@@ -16,6 +16,7 @@ function App() {
     end: '',
     category: 'etc',
     participant: '',
+    color: 'skyblue',
   })
   function onSubmit(e) {
     e.preventDefault();
@@ -33,7 +34,8 @@ function App() {
       start: new Date().toISOString().split("T")[0],
       end: '',
       category: 'etc',
-      participant: ''
+      participant: '',
+      color: 'skyblue',
     })
   }
   function onChange(e) {
@@ -44,7 +46,7 @@ function App() {
     }))
   }
   function onClick(e){
-    // console.dir(e.target)
+    console.dir(e.target)
     setFormData(prevData => ({
       ...prevData,
       ["category"] : e.target.innerText,
@@ -58,7 +60,8 @@ function App() {
         formData={formData}
         onClick={onClick}
         onChange={onChange}
-        onSubmit={onSubmit} />
+        onSubmit={onSubmit}
+         />
       <TodoLists todos={todos} />
     </>
   )

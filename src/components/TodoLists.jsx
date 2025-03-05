@@ -11,7 +11,10 @@ function TodoLists({todos}) {
             <ul className='items'>
                 {
                     todos.map(todo => <li key={todo.id} className='item'>
-                        <h2 className={`category ${todo.color}`}>{todo.category}</h2>
+                        <div className="todo-title d-flex justify-between">
+                            <h2 className={`category ${todo.color}`}>{todo.category}</h2>
+                            <button type="button" className="del-btn"><i className="bi bi-trash"></i></button>
+                        </div>
                         <div className={`main bl-${todo.color}`}>
                             <h2 className='text-overflow'>{todo.title}</h2>
                             <p className='text-overflow'>{todo.desc}</p>
