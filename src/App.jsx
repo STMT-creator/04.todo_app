@@ -60,8 +60,7 @@ function App() {
         formData={formData}
         onClick={onClick}
         onChange={onChange}
-        onSubmit={onSubmit}
-         />
+        onSubmit={onSubmit} />
       <TodoLists todos={todos} />
     </>
   )
