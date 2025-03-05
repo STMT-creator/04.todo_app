@@ -15,7 +15,7 @@ function App() {
     start: new Date().toISOString().split("T")[0],
     end: '',
     category: 'etc',
-    participant: '',
+    participant: 0,
     color: 'skyblue',
   })
   function onSubmit(e) {
@@ -34,7 +34,7 @@ function App() {
       start: new Date().toISOString().split("T")[0],
       end: '',
       category: 'etc',
-      participant: '',
+      participant: 0,
       color: 'skyblue',
     })
   }
@@ -46,6 +46,7 @@ function App() {
     }))
   }
   function onClick(e){
+    // console.dir(e.target)
     console.dir(e.target)
     setFormData(prevData => ({
       ...prevData,
@@ -58,6 +59,7 @@ function App() {
       <TodoHeader />
       <TodoInput
         formData={formData}
+        todos={todos}
         onClick={onClick}
         onChange={onChange}
         onSubmit={onSubmit} />
