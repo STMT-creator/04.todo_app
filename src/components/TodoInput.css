@@ -1,0 +1,19 @@
+.btn {
+    border-radius: 1rem;
+    font-size: .7rem;
+}
+.btn-active {
+    background: linear-gradient(165deg, pink, yellow);
+}
+.d-flex {
+    display: flex;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-between {
+    justify-content: space-between;
+}
+input, textarea, button:focus{
+    outline: none;
+}

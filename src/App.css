@@ -1,0 +1,77 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: .8rem;
+}
+
+form,
+.container {
+    max-width: 600px;
+    margin: 1rem;
+}
+
+
+
+/**/
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.items-center {
+    align-items: center;
+}
+.text-start {
+    text-align: start;
+}
+.text-center {
+    text-align: center;
+}
+.text-end {
+    text-align: end;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+.m-0 {
+    margin: 0;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.fs-1 {
+    font-size: 2rem;
+}
+
+.fs-2 {
+    font-size: 1.5rem;
+}
+
+.fs-3 {
+    font-size: 1rem;
+}
+
+
+/**/
