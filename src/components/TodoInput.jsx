@@ -2,7 +2,7 @@ import React from "react"
 import "./TodoInput.css"
 
 
-function TodoInput({ onChange, onSubmit, formData, onClick, todos }) {
+function TodoInput({ onChange, onSubmit, formData, onClick/* , todos */ }) {
     return (
         <>
             <form className="mx-auto" onSubmit={onSubmit}>
