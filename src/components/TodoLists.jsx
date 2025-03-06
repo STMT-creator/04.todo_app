@@ -13,7 +13,7 @@ function TodoLists({todos, onClickMore, onClickDel }) {
                     todos.map(todo => <li key={todo.id} className='item'>
                         <div className="todo-title d-flex justify-between">
                             <h2 className={`category ${todo.color}`}>{todo.category}</h2>
-                            <button className="more-btn" onClick={onClickMore}><i class="bi bi-three-dots-vertical"></i></button>
+                            <button className="more-btn" onClick={onClickMore}><i className="bi bi-three-dots-vertical"></i></button>
                         </div>
                         <div className={`main bl-${todo.color} posi-relative`}>
                             <h2 className='text-overflow'>{todo.title}</h2>

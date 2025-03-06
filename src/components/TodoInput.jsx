@@ -10,11 +10,11 @@ function TodoInput({ onChange, onSubmit, formData, onClick, todos }) {
                     <legend>Todo App</legend>
                     <div className="title-area d-flex container gap-1 flex-column">
                         <div className="btns d-flex justify-between">
-                            <button type="button" onClick={(e) => onClick(e)} data-color="orange" className="btn text-primary text-caps btn-active">free time</button>  {/* ${formData.dataset.color ===  ? "btn-active" : ""} */}
-                            <button type="button" onClick={(e) => onClick(e)} data-color="pink" className="btn text-primary text-caps">meeting</button>
-                            <button type="button" onClick={(e) => onClick(e)} data-color="yellowgreen" className="btn text-primary text-caps">family</button>
-                            <button type="button" onClick={(e) => onClick(e)} data-color="chocolate" className="btn text-primary text-caps">travel</button>
-                            <button type="button" onClick={(e) => onClick(e)} data-color="skyblue" className="btn text-primary text-caps">etc</button>
+                            <button type="button" onClick={(e) => onClick(e)} data-color="orange" className={`btn text-primary text-caps ${formData.color === "orange" ? "btn-active" : ""}`}>free time</button>  {/* ${formData.dataset.color ===  ? "btn-active" : ""} */}
+                            <button type="button" onClick={(e) => onClick(e)} data-color="pink" className={`btn text-primary text-caps ${formData.color === "pink" ? "btn-active" : ""}`}>meeting</button>
+                            <button type="button" onClick={(e) => onClick(e)} data-color="yellowgreen" className={`btn text-primary text-caps ${formData.color === "yellowgreen" ? "btn-active" : ""}`}>family</button>
+                            <button type="button" onClick={(e) => onClick(e)} data-color="chocolate" className={`btn text-primary text-caps ${formData.color === "chocolate" ? "btn-active" : ""}`}>travel</button>
+                            <button type="button" onClick={(e) => onClick(e)} data-color="skyblue" className={`btn text-primary text-caps ${formData.color === "skyblue" ? "btn-active" : ""}`}>etc</button>
                         </div>
                         <input type="text" className="text-overflow" name="title" id="title" placeholder='Todo Title' onChange={onChange} value={formData.title} />
                         <textarea name="desc" className="text-overflow" id="desc" cols="20" rows="10" placeholder='add a description' value={formData.desc} onChange={onChange}></textarea>
