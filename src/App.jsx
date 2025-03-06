@@ -47,10 +47,7 @@ function App() {
   }
   function onClick(e){
     // console.dir(e.target)
-    console.dir(e.target.classList)
-    if(e.target.classList.length < 4) {
-      e.target.classList.add("btn-active")
-    }
+    // console.dir(e.target.classList)
     setFormData(prevData => ({
       ...prevData,
       ["category"] : e.target.innerText,
@@ -58,11 +55,11 @@ function App() {
     }))
   }
   function onClickMore(e){
-    document.querySelector(".btn-group").classList.toggle("d-none");
-    // console.dir(e.target.previousElementSibling)
+    e.target.parentNode.nextSibling.lastChild.classList.toggle("d-none")
   }
-  function onClickDel(e, todoId){
-    setTodos(prevTodo => [prevTodo.id !== todoId])
+  function onClickDel(todoId){
+    console.log(todoId)
+    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== todoId)) 
   }
   return (
     <>
