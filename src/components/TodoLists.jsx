@@ -19,7 +19,7 @@ function TodoLists({todos, onClickMore, onClickDel }) {
                             <h2 className='text-overflow'>{todo.title}</h2>
                             <p className='text-overflow'>{todo.desc}</p>
                             <div className="btn-group posi-relative d-none">
-                                <button type="button" className="del-btn posi-absolute" onClick={onClickDel}><i className="bi bi-trash"></i></button>
+                                <button type="button" className="del-btn posi-absolute" onClick={() => onClickDel(todo.id)}><i className="bi bi-trash"></i></button>
                             </div>
                         </div>
                         <div className="extra d-flex gap-1">

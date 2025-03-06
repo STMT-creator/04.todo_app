@@ -55,11 +55,12 @@ function App() {
     }))
   }
   function onClickMore(e){
-    e.target.parentNode.nextSibling.lastChild.classList.toggle("d-none")
+    e.currentTarget.parentNode.nextSibling.lastChild.classList.toggle("d-none")
+    // e.target => 버블링 발생시 에러 생길수 있음. // e.currentTarget => 이벤트 발생대상 전체?
   }
   function onClickDel(todoId){
-    console.log(todoId)
-    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== todoId)) 
+    // console.log(todoId)
+    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== todoId))
   }
   return (
     <>
