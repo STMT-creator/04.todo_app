@@ -10,7 +10,7 @@ function TodoInput({ onChange, onSubmit, formData, onClick, todos }) {
                     <legend>Todo App</legend>
                     <div className="title-area d-flex container gap-1 flex-column">
                         <div className="btns d-flex justify-between">
-                            <button type="button" onClick={(e) => onClick(e)} data-color="orange" className={`btn text-primary text-caps ${formData.color === "orange" ? "btn-active" : ""}`}>free time</button>  {/* ${formData.dataset.color ===  ? "btn-active" : ""} */}
+                            <button type="button" onClick={(e) => onClick(e)} data-color="orange" className={`btn text-primary text-caps ${formData.color === "orange" ? "btn-active" : ""}`}>free time</button>
                             <button type="button" onClick={(e) => onClick(e)} data-color="pink" className={`btn text-primary text-caps ${formData.color === "pink" ? "btn-active" : ""}`}>meeting</button>
                             <button type="button" onClick={(e) => onClick(e)} data-color="yellowgreen" className={`btn text-primary text-caps ${formData.color === "yellowgreen" ? "btn-active" : ""}`}>family</button>
                             <button type="button" onClick={(e) => onClick(e)} data-color="chocolate" className={`btn text-primary text-caps ${formData.color === "chocolate" ? "btn-active" : ""}`}>travel</button>
